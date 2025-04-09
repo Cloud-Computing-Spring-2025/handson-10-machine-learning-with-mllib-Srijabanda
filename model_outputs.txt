@@ -1,0 +1,29 @@
+Customer Churn Analysis Results
+===============================
+
+=== Data Preprocessing ===
+Transformed sample (features and label):
+Row(features=DenseVector([1.0, 32.0, 94.76, 3209.02, 1.0, 1.0, 0.0, 1.0]), label=0.0)
+Row(features=DenseVector([1.0, 25.0, 66.16, 1697.94, 1.0, 0.0, 1.0, 0.0]), label=0.0)
+Row(features=SparseVector(8, {1: 63.0, 2: 25.73, 3: 1078.91}), label=0.0)
+Row(features=DenseVector([1.0, 20.0, 86.46, 1882.06, 1.0, 0.0, 1.0, 0.0]), label=0.0)
+Row(features=SparseVector(8, {1: 6.0, 2: 107.77, 3: 642.2, 5: 1.0}), label=1.0)
+
+=== Logistic Regression ===
+AUC Score: 0.7290
+
+=== Chi-Square Feature Selection ===
+Top 5 selected features (first 5 rows):
+Row(selectedFeatures=DenseVector([1.0, 32.0, 94.76, 0.0, 1.0]), label=0.0)
+Row(selectedFeatures=DenseVector([1.0, 25.0, 66.16, 1.0, 0.0]), label=0.0)
+Row(selectedFeatures=SparseVector(5, {1: 63.0, 2: 25.73}), label=0.0)
+Row(selectedFeatures=DenseVector([1.0, 20.0, 86.46, 1.0, 0.0]), label=0.0)
+Row(selectedFeatures=SparseVector(5, {1: 6.0, 2: 107.77}), label=1.0)
+
+=== Model Comparison & Tuning ===
+LogisticRegression AUC: 0.7328
+DecisionTree AUC: 0.7637
+RandomForest AUC: 0.7928
+GBTClassifier AUC: 0.7532
+Best Model: RandomForest, AUC = 0.7928
+
